@@ -20,14 +20,4 @@ vcpkg_cmake_configure(
 vcpkg_cmake_install()
 vcpkg_copy_pdbs()
 
-file(MAKE_DIRECTORY "${CURRENT_PACKAGES_DIR}/debug/share/wiredtiger")
-file(GLOB WT_CONFIG_FILES "${CURRENT_PACKAGES_DIR}/lib/cmake/WiredTiger/*")
-if(WT_CONFIG_FILES)
-    file(COPY ${WT_CONFIG_FILES} DESTINATION "${CURRENT_PACKAGES_DIR}/share/wiredtiger")
-    file(COPY ${WT_CONFIG_FILES} DESTINATION "${CURRENT_PACKAGES_DIR}/debug/share/wiredtiger")
-endif()
-
-file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
-file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
-
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
