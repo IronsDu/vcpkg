@@ -15,6 +15,8 @@ vcpkg_cmake_configure(
         -DENABLE_ZLIB=ON
         -DENABLE_ZSTD=ON
         -DWT_STANDALONE_BUILD=ON
+        -DCMAKE_C_FLAGS="-w"
+        -DCMAKE_CXX_FLAGS="-w"
 )
 
 vcpkg_cmake_install()
