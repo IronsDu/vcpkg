@@ -1,6 +1,6 @@
 {
   "name": "wiredtiger",
-  "version-semver": "11.3.1",
+  "version-string": "mongodb-8.2.5",
   "description": "High performance, scalable, production quality embedded database (MongoDB storage engine)",
   "homepage": "https://github.com/wiredtiger/wiredtiger",
   "license": "GPL-2.0",

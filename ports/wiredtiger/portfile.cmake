@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO wiredtiger/wiredtiger
-    REF 11.3.1           # MongoDB 官方维护的分支，质量最好
-    SHA512 b2499496bd149600a01e41567dddde5229ff7074111601db2f0a9f6bb196a4765a358fa010dd684a9f5476558fa69c875d8de3d02751c0f04ab842d1ae421e5d
+    REF mongodb-8.2.5           # MongoDB 官方维护的分支，质量最好
+    SHA512 351d24dd4bd63e4cda565a0296392f7882c248fd6889154292ce77dc113e5d49d013ae125d1fc8d87c8debb1bc1fdffbb2b238264da0d89e64392e1d8cdbc615
     HEAD_REF develop
 )
 
@@ -17,6 +17,7 @@ vcpkg_cmake_configure(
         -DWT_STANDALONE_BUILD=ON
         -DCMAKE_C_FLAGS="-w"
         -DCMAKE_CXX_FLAGS="-w"
+        -DCMAKE_BUILD_TYPE=RelWithDebInfo
 )
 
 vcpkg_cmake_install()
